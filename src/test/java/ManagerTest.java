@@ -39,5 +39,10 @@ public class ManagerTest{
         assertEquals(34_020, manager.getSalary(), 0.01);
     }
 
+    @Test
+    public void canPayBonus(){
+        assertEquals(340, manager.payBonus(), 0.01);
+    }
+
 
 }
