@@ -39,5 +39,5 @@ public class DeveloperTest {
         public void canPayBonus(){
             assertEquals(270, developer.payBonus(), 0.01);
         }
-        
+
 }
