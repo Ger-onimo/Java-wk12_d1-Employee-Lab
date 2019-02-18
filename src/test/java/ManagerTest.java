@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import staff.management.Manager;
 
 import static org.junit.Assert.assertEquals;
 
@@ -31,5 +32,12 @@ public class ManagerTest{
     public void hasDeptName(){
         assertEquals("Accounts", manager.getDeptName());
     }
+
+    @Test
+    public void canRaiseSalary(){
+        manager.raiseSalary(20);
+        assertEquals(34_020, manager.getSalary(), 0.01);
+    }
+
 
 }
