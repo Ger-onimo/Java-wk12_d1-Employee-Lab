@@ -40,9 +40,28 @@ public class ManagerTest{
     }
 
     @Test
+    public void doesntRaiseSalaryIfNegative(){
+        manager.raiseSalary(-20);
+        assertEquals(34_000, manager.getSalary(), 0.01);
+    }
+
+    @Test
     public void canPayBonus(){
         assertEquals(340, manager.payBonus(), 0.01);
     }
+
+    @Test
+    public void canUpdateName(){
+        manager.setName("Pat C. Kline");
+        assertEquals("Pat C. Kline", manager.getName());
+    }
+
+    @Test
+    public void ignoresNullName(){
+        manager.setName("");
+        assertEquals("Pat Smith", manager.getName());
+    }
+
 
 
 }
